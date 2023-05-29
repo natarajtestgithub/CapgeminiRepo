@@ -172,7 +172,7 @@ public class LandingPage extends BaseClass{
 
 	public void addingtoCart() throws InterruptedException
 	{
-		 //adding item to the cart
+	//adding item to the cart
    searchButton.sendKeys("Men");
    searchButton.click();
    Thread.sleep(1000);
