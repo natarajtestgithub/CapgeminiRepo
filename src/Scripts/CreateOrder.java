@@ -31,7 +31,7 @@ public class CreateOrder extends BaseClass{
 	driver=invokeBrowser();
     lp1= PageFactory.initElements(driver, LandingPage.class);
     //generating the reports in the format of extent report 
-	 ExtentReports extent = new ExtentReports();
+	ExtentReports extent = new ExtentReports();
 	ExtentSparkReporter htmlReporter = new ExtentSparkReporter("C:\\repo\\Capegemni\\CapegemniDemo\\test-output\\Reports.html");
 	extent.attachReporter(htmlReporter);
     ExtentTest test = extent.createTest("My Test", "Description of my test");

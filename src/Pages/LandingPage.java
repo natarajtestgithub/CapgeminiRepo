@@ -134,19 +134,17 @@ public class LandingPage extends BaseClass{
 		Thread.sleep(2000);
 		continueButton.click();
 		
-		String accountPageName=regeisterPageName.getText();
-		//Assert.assertEquals("Account Login",accountPageName);
-		System.out.println("inside register");
+		String accountPageName=regeisterPageName.getAttribute("innerText");
+		Assert.assertEquals("CREATE ACCOUNT",accountPageName);
+		System.out.println("Navigated to the Registration page succesfully");
+		
 	}
 	
 	public void creatingNewAccount() throws InterruptedException
 	{
-		String pageName=regeisterPageName.getText();
-		System.out.println(pageName);
 		
-	//	Assert.assertEquals("",pageName);
-		//logging("Entering the details for registration");
-		firstName.sendKeys("FirstName",Keys.TAB);
+		System.out.println("Enter all the mandatory fields and register");
+        firstName.sendKeys("FirstName",Keys.TAB);
 		//logging("Entering first name as FirstName");
 		lastName.sendKeys("cap last",Keys.TAB);
 		email.sendKeys("testcap@gmail.com",Keys.TAB);
