@@ -1,5 +1,7 @@
 package Pages;
 
+import static org.testng.Assert.assertEquals;
+
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -162,11 +164,11 @@ public class LandingPage extends BaseClass{
 		loginname.sendKeys("Cap1234",Keys.TAB);
 		password.sendKeys("Cap@123",Keys.TAB);
 		cnfmPwd.sendKeys("Cap@123",Keys.TAB);
-//		privacyCheckbox.click();
-//		Thread.sleep(1000);
-//		continueButton.click();
-//		Thread.sleep(2000);
-//		continueButton.click();
+		privacyCheckbox.click();
+		Thread.sleep(1000);
+		continueButton.click();
+		Thread.sleep(2000);
+		continueButton.click();
 	}
 	
 
@@ -202,6 +204,7 @@ public class LandingPage extends BaseClass{
 		cnfmOrder.click();
 		Thread.sleep(1000);
 		String ordermessage= validatesuccessmsg.getAttribute("innerText");
+		assertEquals(ordermessage, "Your Order Has Been Processed!");
 	}
 	
 
